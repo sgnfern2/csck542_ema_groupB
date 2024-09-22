@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -24,10 +26,11 @@ DROP TABLE IF EXISTS `research_projects`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `research_projects` (
   `project_id` int NOT NULL,
-  `project_title` varchar(45) NOT NULL,
-  `funding_source` varchar(45) NOT NULL,
-  `publications` varchar(45) DEFAULT NULL,
-  `outcomes` varchar(45) DEFAULT NULL,
+  `project_title` varchar(150) DEFAULT NULL,
+  `funding_source` varchar(100) DEFAULT NULL,
+  `publication` varchar(150) DEFAULT NULL,
+  `outcome` varchar(150) DEFAULT NULL,
+  `group_id` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`project_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,6 +41,7 @@ CREATE TABLE `research_projects` (
 
 LOCK TABLES `research_projects` WRITE;
 /*!40000 ALTER TABLE `research_projects` DISABLE KEYS */;
+INSERT INTO `research_projects` VALUES (12368,'Resilient Futures: Strategies for Climate Adaptation','United Nations Environment Programme (UNEP)','\"Policy Frameworks for Resilience: Lessons Learned\" (Environmental Policy Journal, 2024)','Organized a global conference to share best practices and foster collaboration.','63290'),(21331,'NextGen Robotics: Enhancing Human-Robot Collaboration','Defense Advanced Research Projects Agency (DARPA)','\"Human-Robot Interaction: Improving Safety and Efficiency\" (Journal of Robotics Research, 2023)','Developed a prototype robot for search and rescue operations.','55598'),(36776,'Voices of the Past: Reinterpreting Cultural Narratives','National Endowment for the Humanities (NEH)','\"Cultural Narratives in Transition: A Comparative Study\" (Journal of Cultural Studies, 2023)','Created community workshops that engaged local populations in historical storytelling.','22857'),(50938,'Ethical Frameworks for AI Deployment','Hewlett Foundation','\"Regulating AI: A Global Perspective\" (AI & Society, 2024)','Developed policy recommendations for responsible AI use.','67164'),(63441,'Quantum Leap: Exploring New Frontiers in Quantum Mechanics','National Science Foundation (NSF)','\"The Future of Quantum Teleportation\" (Journal of Quantum Physics, 2024)','Contributed to international standards for quantum information protocols.','94844'),(68183,'Innovative Pathways to Renewable Energy','Department of Energy (DOE)','\"Wind Energy: Harnessing Nature’s Power\" (Journal of Sustainable Energy, 2024)','Collaborated with local governments to implement solar panel programs.','87653'),(69121,'Equity in Action: Policy Reform for Social Justice','Ford Foundation','\"Policy Approaches to Social Inequality\" (Journal of Social Policy, 2023)','Published a comprehensive report that influenced local policy changes.','88024'),(78367,'Next-Generation Biomaterials for a Sustainable Future','Environmental Protection Agency (EPA)','\"The Role of Renewable Materials in Circular Economy\" (Sustainability Journal, 2024)','Engaged in partnerships with industries to promote sustainable practices in material usage.','99860'),(79689,'Modeling Real-World Phenomena: From Theory to Application','National Science Foundation (NSF)','\"Optimization Techniques in Urban Planning\" (Operations Research, 2024)','Developed a software tool for urban planners to optimize resource allocation.','95237'),(82069,'AI for All: Democratizing Machine Learning','National Science Foundation (NSF)','\"Accessibility in AI: Tools and Techniques\" (Journal of AI Research, 2023)','Developed open-source AI tools for educational institutions.','64176'),(86494,'CRISPR Innovations: Advancing Genetic Therapies','National Institutes of Health (NIH)','\"Next-Gen CRISPR: New Techniques in Gene Editing\" (Biotechnology Advances, 2023)','Developed a patented method for more efficient gene editing.','45170');
 /*!40000 ALTER TABLE `research_projects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-22 16:13:38
+-- Dump completed on 2024-09-22 18:37:36

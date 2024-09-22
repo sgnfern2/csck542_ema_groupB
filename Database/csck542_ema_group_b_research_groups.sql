@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -24,8 +26,8 @@ DROP TABLE IF EXISTS `research_groups`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `research_groups` (
   `group_id` int NOT NULL,
-  `group_title` varchar(45) NOT NULL,
-  `description` varchar(45) NOT NULL,
+  `group_title` varchar(100) DEFAULT NULL,
+  `description` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,6 +38,7 @@ CREATE TABLE `research_groups` (
 
 LOCK TABLES `research_groups` WRITE;
 /*!40000 ALTER TABLE `research_groups` DISABLE KEYS */;
+INSERT INTO `research_groups` VALUES (22857,'Historical Narratives and Cultural Studies Group','This group explores the connections between history, culture, and identity.'),(45170,'Biotechnology Innovation Group','This group investigates advancements in biotechnology, including genetic engineering and synthetic biology.'),(55598,'Robotics and Autonomous Systems Lab','This lab focuses on the design and development of robots and autonomous technologies.'),(63290,'Global Climate Change Initiative','This research group focuses on the science and policy surrounding climate change.'),(64176,'Artificial Intelligence and Machine Learning Hub','This group investigates cutting-edge AI and machine learning technologies.'),(67164,'Artificial Intelligence Ethics and Society Initiative','This interdisciplinary group addresses the ethical implications of AI technologies.'),(87653,'Center for Sustainable Energy Solutions','This group investigates renewable energy technologies and sustainable practices.'),(88024,'Social Justice and Policy Institute','This research group explores the intersections of policy, race, gender, and class.'),(94844,'Quantum Physics Research Group','This group investigates phenomena such as entanglement, superposition, and quantum computing.'),(95237,'Applied Mathematical Modeling Group','This group specializes in creating mathematical models to solve real-world problems in fields such as biology, engineering, and finance.'),(99860,'Renewable Materials Research Center','This group explores the development and application of sustainable materials to reduce environmental impact.');
 /*!40000 ALTER TABLE `research_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-22 16:13:38
+-- Dump completed on 2024-09-22 18:37:37

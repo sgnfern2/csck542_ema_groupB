@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -24,8 +26,8 @@ DROP TABLE IF EXISTS `committees`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `committees` (
   `committee_id` int NOT NULL,
-  `committee_name` varchar(45) NOT NULL,
-  `description` varchar(45) NOT NULL,
+  `committee_name` varchar(100) NOT NULL,
+  `description` varchar(150) NOT NULL,
   PRIMARY KEY (`committee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,6 +38,7 @@ CREATE TABLE `committees` (
 
 LOCK TABLES `committees` WRITE;
 /*!40000 ALTER TABLE `committees` DISABLE KEYS */;
+INSERT INTO `committees` VALUES (6034,'Curriculum Development Task Force','This committee examines course offerings, assesses faculty needs, and explores innovative teaching methods to enhance the educational experience.'),(10774,'Student Wellness and Mental Health Committee','This committee creates programs and resources to support mental health.'),(22023,'Community Engagement Committee','This committee fosters partnerships between the college and local community organizations.'),(43182,'Diversity and Inclusion Committee','This committee focuses on promoting a diverse and inclusive campus environment.'),(43890,'Sustainability and Environmental Impact Committee','This committee assesses the institution\'s environmental practices and recommends sustainable policies.'),(45731,'Events and Activities Committee','Responsible for planning and executing campus events, this committee focuses on creating a vibrant campus life.'),(60053,'Technology and Innovation Advisory Board','This committee explores the integration of technology in education and administration.'),(61113,'Academic Integrity Council','This committee addresses issues related to academic honesty and integrity within the college.');
 /*!40000 ALTER TABLE `committees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-22 16:13:39
+-- Dump completed on 2024-09-22 18:37:37
