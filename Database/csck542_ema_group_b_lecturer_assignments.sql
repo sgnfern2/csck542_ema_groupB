@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -18,27 +16,28 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `advisor_assignments`
+-- Table structure for table `lecturer_assignments`
 --
 
-DROP TABLE IF EXISTS `advisor_assignments`;
+DROP TABLE IF EXISTS `lecturer_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `advisor_assignments` (
-  `advising_assignment_id` int NOT NULL,
+CREATE TABLE `lecturer_assignments` (
+  `course_assignment_id` int NOT NULL,
   `lecturer_id` varchar(45) NOT NULL,
-  `student_id` varchar(45) NOT NULL,
-  PRIMARY KEY (`advising_assignment_id`)
+  `course_id` varchar(45) NOT NULL,
+  PRIMARY KEY (`course_assignment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `advisor_assignments`
+-- Dumping data for table `lecturer_assignments`
 --
 
-LOCK TABLES `advisor_assignments` WRITE;
-/*!40000 ALTER TABLE `advisor_assignments` DISABLE KEYS */;
-/*!40000 ALTER TABLE `advisor_assignments` ENABLE KEYS */;
+LOCK TABLES `lecturer_assignments` WRITE;
+/*!40000 ALTER TABLE `lecturer_assignments` DISABLE KEYS */;
+INSERT INTO `lecturer_assignments` VALUES (178,'50093','74086'),(1984,'52988','40416'),(4975,'62960','20486'),(7375,'55303','41620'),(7993,'24410','54918'),(8136,'57925','20736'),(10882,'34694','28524'),(12101,'78878','76514'),(13447,'63194','56353'),(14211,'55303','31510'),(20803,'88670','84663'),(22930,'19120','53655'),(27622,'57925','30381'),(31350,'68452','45360'),(31746,'62960','75317'),(32183,'50093','65947'),(37707,'42923','89032'),(41935,'57925','83086'),(42853,'78878','43759'),(47824,'68452','26807'),(48109,'19120','11824'),(51101,'34694','21239'),(52800,'63194','12448'),(53323,'88476','44437'),(55399,'24410','91974'),(56487,'50093','17519'),(60355,'78878','39288'),(61114,'24410','69738'),(67267,'88476','46018'),(67914,'19120','78193'),(69663,'68452','29483'),(70274,'34694','20034'),(71282,'52988','18440'),(78519,'88670','75522'),(88496,'42923','70711'),(89459,'88670','41871'),(91821,'42923','88776'),(97677,'88476','24823'),(98420,'62960','72347');
+/*!40000 ALTER TABLE `lecturer_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-21 17:06:19
+-- Dump completed on 2024-09-22 16:13:39

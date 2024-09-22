@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -18,33 +16,27 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `students`
+-- Table structure for table `research_group_members`
 --
 
-DROP TABLE IF EXISTS `students`;
+DROP TABLE IF EXISTS `research_group_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `students` (
-  `student_id` int NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
-  `date_of_birth` datetime NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `program_id` int NOT NULL,
-  `year_of_study` int NOT NULL,
-  `graduation_status` varchar(45) NOT NULL,
-  `disciplinary_records` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`student_id`)
+CREATE TABLE `research_group_members` (
+  `group_id` int NOT NULL,
+  `lecturer_id` int NOT NULL,
+  `student_id` varchar(45) NOT NULL,
+  PRIMARY KEY (`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `students`
+-- Dumping data for table `research_group_members`
 --
 
-LOCK TABLES `students` WRITE;
-/*!40000 ALTER TABLE `students` DISABLE KEYS */;
-/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+LOCK TABLES `research_group_members` WRITE;
+/*!40000 ALTER TABLE `research_group_members` DISABLE KEYS */;
+/*!40000 ALTER TABLE `research_group_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-21 17:06:18
+-- Dump completed on 2024-09-22 16:13:37

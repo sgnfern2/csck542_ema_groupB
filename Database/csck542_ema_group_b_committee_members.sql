@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -18,29 +16,27 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `research_projects`
+-- Table structure for table `committee_members`
 --
 
-DROP TABLE IF EXISTS `research_projects`;
+DROP TABLE IF EXISTS `committee_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `research_projects` (
-  `project_id` int NOT NULL,
-  `project_title` varchar(45) NOT NULL,
-  `funding_source` varchar(45) NOT NULL,
-  `publications` varchar(45) DEFAULT NULL,
-  `outcomes` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`project_id`)
+CREATE TABLE `committee_members` (
+  `committee_id` int NOT NULL,
+  `lecturer_id` varchar(45) NOT NULL,
+  `staff_id` varchar(45) NOT NULL,
+  PRIMARY KEY (`committee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `research_projects`
+-- Dumping data for table `committee_members`
 --
 
-LOCK TABLES `research_projects` WRITE;
-/*!40000 ALTER TABLE `research_projects` DISABLE KEYS */;
-/*!40000 ALTER TABLE `research_projects` ENABLE KEYS */;
+LOCK TABLES `committee_members` WRITE;
+/*!40000 ALTER TABLE `committee_members` DISABLE KEYS */;
+/*!40000 ALTER TABLE `committee_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-21 17:06:18
+-- Dump completed on 2024-09-22 16:13:39

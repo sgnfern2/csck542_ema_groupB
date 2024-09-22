@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: csck542_ema_group_b
@@ -18,27 +16,26 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `student_organizations`
+-- Table structure for table `program_requirements`
 --
 
-DROP TABLE IF EXISTS `student_organizations`;
+DROP TABLE IF EXISTS `program_requirements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `student_organizations` (
-  `organization_id` int NOT NULL,
-  `organization_name` varchar(45) NOT NULL,
-  `description` varchar(45) NOT NULL,
-  PRIMARY KEY (`organization_id`)
+CREATE TABLE `program_requirements` (
+  `program_id` int NOT NULL,
+  `course_id` int NOT NULL,
+  PRIMARY KEY (`program_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `student_organizations`
+-- Dumping data for table `program_requirements`
 --
 
-LOCK TABLES `student_organizations` WRITE;
-/*!40000 ALTER TABLE `student_organizations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student_organizations` ENABLE KEYS */;
+LOCK TABLES `program_requirements` WRITE;
+/*!40000 ALTER TABLE `program_requirements` DISABLE KEYS */;
+/*!40000 ALTER TABLE `program_requirements` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-21 17:06:19
+-- Dump completed on 2024-09-22 16:13:37
