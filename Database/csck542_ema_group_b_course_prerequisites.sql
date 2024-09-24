@@ -18,28 +18,27 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `committees`
+-- Table structure for table `course_prerequisites`
 --
 
-DROP TABLE IF EXISTS `committees`;
+DROP TABLE IF EXISTS `course_prerequisites`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `committees` (
-  `committee_id` int NOT NULL,
-  `committee_name` varchar(100) NOT NULL,
-  `description` varchar(150) NOT NULL,
-  PRIMARY KEY (`committee_id`)
+CREATE TABLE `course_prerequisites` (
+  `course_id` int NOT NULL,
+  `prerequisite_id` int NOT NULL,
+  PRIMARY KEY (`course_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `committees`
+-- Dumping data for table `course_prerequisites`
 --
 
-LOCK TABLES `committees` WRITE;
-/*!40000 ALTER TABLE `committees` DISABLE KEYS */;
-INSERT INTO `committees` VALUES (10774,'Student Wellness and Mental Health Committee','This committee creates programs and resources to support mental health.'),(22023,'Community Engagement Committee','This committee fosters partnerships between the college and local community organizations.'),(43182,'Diversity and Inclusion Committee','This committee focuses on promoting a diverse and inclusive campus environment.'),(43890,'Sustainability and Environmental Impact Committee','This committee assesses the institution\'s environmental practices and recommends sustainable policies.'),(45731,'Events and Activities Committee','Responsible for planning and executing campus events, this committee focuses on creating a vibrant campus life.'),(60053,'Technology and Innovation Advisory Board','This committee explores the integration of technology in education and administration.'),(60344,'Curriculum Development Task Force','This committee examines course offerings, assesses faculty needs, and explores innovative teaching methods to enhance the educational experience.'),(61113,'Academic Integrity Council','This committee addresses issues related to academic honesty and integrity within the college.');
-/*!40000 ALTER TABLE `committees` ENABLE KEYS */;
+LOCK TABLES `course_prerequisites` WRITE;
+/*!40000 ALTER TABLE `course_prerequisites` DISABLE KEYS */;
+INSERT INTO `course_prerequisites` VALUES (11824,83064),(18440,60526),(20736,84024),(21329,31837),(43759,14194),(46018,43792),(47959,27379),(53655,32613),(74086,64790),(75317,38215),(75522,89244),(83086,84024);
+/*!40000 ALTER TABLE `course_prerequisites` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

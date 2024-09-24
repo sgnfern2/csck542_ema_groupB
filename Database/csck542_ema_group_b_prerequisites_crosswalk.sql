@@ -18,30 +18,27 @@ USE `csck542_ema_group_b`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `research_group_members`
+-- Table structure for table `prerequisites_crosswalk`
 --
 
-DROP TABLE IF EXISTS `research_group_members`;
+DROP TABLE IF EXISTS `prerequisites_crosswalk`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `research_group_members` (
-  `group_id` int DEFAULT NULL,
-  `lecturer_id` int DEFAULT NULL,
-  `student_id` varchar(45) DEFAULT NULL,
-  `start_date` varchar(45) DEFAULT NULL,
-  `end_date` varchar(45) DEFAULT NULL,
-  `role` varchar(45) DEFAULT NULL
+CREATE TABLE `prerequisites_crosswalk` (
+  `prerequisite_id` int NOT NULL,
+  `course_id` int NOT NULL,
+  PRIMARY KEY (`prerequisite_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `research_group_members`
+-- Dumping data for table `prerequisites_crosswalk`
 --
 
-LOCK TABLES `research_group_members` WRITE;
-/*!40000 ALTER TABLE `research_group_members` DISABLE KEYS */;
-INSERT INTO `research_group_members` VALUES (22857,34694,NULL,'10/10/2020',NULL,'Director'),(45170,NULL,'42138','06/05/2022','06/12/2023','Member'),(55598,42923,NULL,'03/10/2021',NULL,'Advisor'),(63290,50093,'','11/06/2022',NULL,'Treasurer'),(64176,NULL,'48673','07/11/2023',NULL,'Member'),(67164,52988,NULL,'12/12/2021','','Director'),(87653,NULL,'48983','20/05/2022','06/05/2023','Member'),(88024,55303,NULL,'24/03/2020',NULL,'Director'),(94844,NULL,'49331','18/06/2022',NULL,'Member'),(95237,NULL,'58380','23/09/2023',NULL,'Member'),(99860,57925,NULL,'22/07/2021',NULL,'Treasurer'),(22857,NULL,'63989','25/01/2023',NULL,'Member'),(45170,NULL,'74510','18/12/2023',NULL,'Member'),(55598,63194,NULL,'17/10/2020',NULL,'Advisor'),(63290,NULL,'82667','14/04/2022',NULL,'Member'),(64176,68452,NULL,'13/03/2020','12/01/2023','Advisor'),(67164,NULL,'94191','11/11/2023',NULL,'Member'),(87653,NULL,'98389','11/04/2022',NULL,'Member'),(88024,NULL,'21302','09/09/2023',NULL,'Member'),(94844,NULL,'22773','10/07/2023',NULL,'Member'),(95237,88476,NULL,'14/10/2022',NULL,'Advisor'),(99860,NULL,'29695','12/05/2023',NULL,'Member');
-/*!40000 ALTER TABLE `research_group_members` ENABLE KEYS */;
+LOCK TABLES `prerequisites_crosswalk` WRITE;
+/*!40000 ALTER TABLE `prerequisites_crosswalk` DISABLE KEYS */;
+INSERT INTO `prerequisites_crosswalk` VALUES (12379,76514),(14194,39288),(31837,20034),(32613,14167),(38215,72347),(47392,44437),(60526,40416),(64790,17519),(83064,78193),(84024,30381),(89244,41871);
+/*!40000 ALTER TABLE `prerequisites_crosswalk` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

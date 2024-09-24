@@ -25,11 +25,13 @@ DROP TABLE IF EXISTS `research_project_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `research_project_members` (
-  `project_id` int NOT NULL,
-  `group_id` int NOT NULL,
-  `lecturer_id` varchar(45) NOT NULL,
-  `student_id` varchar(45) NOT NULL,
-  PRIMARY KEY (`project_id`)
+  `project_id` int DEFAULT NULL,
+  `group_id` int DEFAULT NULL,
+  `lecturer_id` varchar(45) DEFAULT NULL,
+  `student_id` varchar(45) DEFAULT NULL,
+  `start_date` varchar(45) DEFAULT NULL,
+  `end_date` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,6 +41,7 @@ CREATE TABLE `research_project_members` (
 
 LOCK TABLES `research_project_members` WRITE;
 /*!40000 ALTER TABLE `research_project_members` DISABLE KEYS */;
+INSERT INTO `research_project_members` VALUES (12368,63290,'88670',NULL,'10/06/2020',NULL,'Director'),(21331,55598,'63194',NULL,'05/05/2021',NULL,'Advisor'),(36776,22857,'68452',NULL,'12/12/0222',NULL,'Director'),(50938,67164,'78878',NULL,'07/08/2020',NULL,'Director'),(63441,94844,'42923',NULL,'04/10/2021','10/06/2023','Advisor'),(68183,87653,'88670',NULL,'17/06/2022',NULL,'Advisor'),(69121,88024,'62960',NULL,'03/03/2021',NULL,'Advisor'),(78367,45170,'24410',NULL,'14/03/2022',NULL,'Director'),(79689,88024,'68452',NULL,'13/11/2023',NULL,'Advisor'),(82069,64176,'78878',NULL,'10/04/2022',NULL,'Advisor'),(86494,45170,'34694',NULL,'06/01/2021',NULL,'Director'),(12368,63290,NULL,'49194','05/04/2023','08/07/2024','Member'),(21331,55598,NULL,'56661','01/04/2023',NULL,'Member'),(36776,22857,NULL,'61242','10/10/2021','06/08/2023','Member'),(50938,67164,NULL,'65144','03/03/2023',NULL,'Member'),(63441,94844,NULL,'72736','02/01/2023',NULL,'Member'),(68183,87653,NULL,'74510','17/05/2022',NULL,'Member'),(69121,88024,NULL,'88145','14/02/2023','10/06/2024','Member'),(78367,45170,NULL,'14268','11/02/2023',NULL,'Member'),(79689,88024,NULL,'14398','10/03/2022',NULL,'Member'),(82069,64176,NULL,'16972','20/07/2023',NULL,'Member'),(86494,45170,NULL,'30153','22/02/2023',NULL,'Member');
 /*!40000 ALTER TABLE `research_project_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-22 18:37:37
+-- Dump completed on 2024-09-23 21:02:04
