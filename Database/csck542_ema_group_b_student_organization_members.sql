@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `student_organization_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student_organization_members` (
-  `organization_id` int DEFAULT NULL,
+  `organization_id` int NOT NULL,
   `student_id` int DEFAULT NULL,
   `lecturer_id` int DEFAULT NULL,
   `start_date` varchar(45) DEFAULT NULL,
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-23 21:02:03
+-- Dump completed on 2024-09-24 22:15:44

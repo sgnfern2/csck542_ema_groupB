@@ -27,10 +27,11 @@ DROP TABLE IF EXISTS `committee_members`;
 CREATE TABLE `committee_members` (
   `committee_id` int NOT NULL,
   `lecturer_id` varchar(45) DEFAULT NULL,
-  `staff_id` varchar(45) DEFAULT NULL,
+  `staff_id` int DEFAULT NULL,
   `start_date` varchar(45) DEFAULT NULL,
   `end_date` varchar(45) DEFAULT NULL,
-  `role` varchar(45) DEFAULT NULL
+  `role` varchar(45) DEFAULT NULL,
+  KEY `staff_id_idx` (`staff_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +41,7 @@ CREATE TABLE `committee_members` (
 
 LOCK TABLES `committee_members` WRITE;
 /*!40000 ALTER TABLE `committee_members` DISABLE KEYS */;
-INSERT INTO `committee_members` VALUES (10774,'11812',NULL,'15/09/2024',NULL,'Director'),(22023,NULL,'7261','10/08/2024',NULL,'Outreach Coordinator'),(43182,'19120',NULL,'01/03/2024',NULL,'Associate Director'),(43890,'52988',NULL,'03/04/2023',NULL,'Treasurer'),(45731,NULL,'37801','12/06/2023','09/09/2024','Outreach Coordinator'),(60053,'34694',NULL,'22/07/2022',NULL,'Director'),(60344,'88476',NULL,NULL,NULL,'Associate Director'),(61113,'57925',NULL,'10/09/2021','03/04/2023','Treasurer'),(10774,NULL,'80339','16/07/2022',NULL,'Secretary'),(22023,'68452',NULL,'23/10/2022',NULL,'Member'),(43182,'55303',NULL,'11/11/2023',NULL,'Member'),(43890,'88476',NULL,'09/03/2022',NULL,'Outreach Coordinator'),(45731,NULL,'57815','14/06/2020',NULL,'Director'),(60053,'34694',NULL,'22/10/2020','06/08/2022','Member'),(60344,NULL,'81649','17/12/2020',NULL,'Member'),(61113,'62960',NULL,'11/08/2021',NULL,'Member');
+INSERT INTO `committee_members` VALUES (10774,'11812',NULL,'15/09/2024',NULL,'Director'),(22023,NULL,7261,'10/08/2024',NULL,'Outreach Coordinator'),(43182,'19120',NULL,'01/03/2024',NULL,'Associate Director'),(43890,'52988',NULL,'03/04/2023',NULL,'Treasurer'),(45731,NULL,37801,'12/06/2023','09/09/2024','Outreach Coordinator'),(60053,'34694',NULL,'22/07/2022',NULL,'Director'),(60344,'88476',NULL,NULL,NULL,'Associate Director'),(61113,'57925',NULL,'10/09/2021','03/04/2023','Treasurer'),(10774,NULL,80339,'16/07/2022',NULL,'Secretary'),(22023,'68452',NULL,'23/10/2022',NULL,'Member'),(43182,'55303',NULL,'11/11/2023',NULL,'Member'),(43890,'88476',NULL,'09/03/2022',NULL,'Outreach Coordinator'),(45731,NULL,57815,'14/06/2020',NULL,'Director'),(60053,'34694',NULL,'22/10/2020','06/08/2022','Member'),(60344,NULL,81649,'17/12/2020',NULL,'Member'),(61113,'62960',NULL,'11/08/2021',NULL,'Member');
 /*!40000 ALTER TABLE `committee_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-23 21:02:04
+-- Dump completed on 2024-09-24 22:15:43
