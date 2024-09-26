@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `prerequisites_crosswalk`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `prerequisites_crosswalk` (
-  `prerequisite_id` int NOT NULL,
+  `prerequisite_id` int NOT NULL AUTO_INCREMENT,
   `course_id` int NOT NULL,
   PRIMARY KEY (`prerequisite_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=89245 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `prerequisites_crosswalk` (
 
 LOCK TABLES `prerequisites_crosswalk` WRITE;
 /*!40000 ALTER TABLE `prerequisites_crosswalk` DISABLE KEYS */;
-INSERT INTO `prerequisites_crosswalk` VALUES (12379,76514),(14194,39288),(31837,20034),(32613,14167),(38215,72347),(47392,44437),(60526,40416),(64790,17519),(83064,78193),(84024,30381),(89244,41871);
+INSERT INTO `prerequisites_crosswalk` VALUES (16001,60034),(16002,60016),(16003,60006),(16004,60003),(16005,60030),(16006,60021),(16007,60017),(16008,60004),(16009,60035),(16010,60014),(16011,60019);
 /*!40000 ALTER TABLE `prerequisites_crosswalk` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-24 22:15:45
+-- Dump completed on 2024-09-25 22:00:14
