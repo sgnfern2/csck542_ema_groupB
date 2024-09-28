@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER 
 USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: csck542_ema_group_b
+-- Host: 192.168.1.32    Database: csck542_ema_group_b
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -25,12 +25,12 @@ DROP TABLE IF EXISTS `research_project_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `research_project_members` (
-  `project_id` int DEFAULT NULL,
-  `group_id` int DEFAULT NULL,
-  `lecturer_id` varchar(45) DEFAULT NULL,
-  `student_id` varchar(45) DEFAULT NULL,
-  `start_date` varchar(45) DEFAULT NULL,
-  `end_date` varchar(45) DEFAULT NULL,
+  `project_id` int NOT NULL,
+  `group_id` int NOT NULL,
+  `lecturer_id` int DEFAULT NULL,
+  `student_id` int DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
   `role` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +41,7 @@ CREATE TABLE `research_project_members` (
 
 LOCK TABLES `research_project_members` WRITE;
 /*!40000 ALTER TABLE `research_project_members` DISABLE KEYS */;
-INSERT INTO `research_project_members` VALUES (11001,80004,'20015',NULL,'10/06/2020',NULL,'Director'),(11002,80003,'20011',NULL,'05/05/2021',NULL,'Advisor'),(11003,80001,'20012',NULL,'12/12/0222',NULL,'Director'),(11004,80006,'20013',NULL,'07/08/2020',NULL,'Director'),(11005,80009,'20005',NULL,'04/10/2021','10/06/2023','Advisor'),(11006,80007,'20015',NULL,'17/06/2022',NULL,'Advisor'),(11007,80008,'20010',NULL,'03/03/2021',NULL,'Advisor'),(11008,80002,'20003',NULL,'14/03/2022',NULL,'Director'),(11009,80008,'20012',NULL,'13/11/2023',NULL,'Advisor'),(11010,80005,'20013',NULL,'10/04/2022',NULL,'Advisor'),(11011,80002,'20004',NULL,'06/01/2021',NULL,'Director'),(11001,80004,NULL,'10030','05/04/2023','08/07/2024','Member'),(11002,80003,NULL,'10032','01/04/2023',NULL,'Member'),(11003,80001,NULL,'10036','10/10/2021','06/08/2023','Member'),(11004,80006,NULL,'10039','03/03/2023',NULL,'Member'),(11005,80009,NULL,'10041','02/01/2023',NULL,'Member'),(11006,80007,NULL,'10042','17/05/2022',NULL,'Member'),(11007,80008,NULL,'10047','14/02/2023','10/06/2024','Member'),(11008,80002,NULL,'10005','11/02/2023',NULL,'Member'),(11009,80008,NULL,'10006','10/03/2022',NULL,'Member'),(11010,80005,NULL,'10008','20/07/2023',NULL,'Member'),(11011,80002,NULL,'10018','22/02/2023',NULL,'Member');
+INSERT INTO `research_project_members` VALUES (11001,80004,20015,NULL,'2020-02-10',NULL,'Director'),(11002,80003,20011,NULL,'2021-11-08',NULL,'Advisor'),(11003,80001,20012,NULL,'2022-10-20',NULL,'Director'),(11004,80006,20013,NULL,'2021-10-08',NULL,'Director'),(11005,80009,20005,NULL,'2021-04-03','2023-12-20','Advisor'),(11006,80007,20015,NULL,'2020-02-10',NULL,'Advisor'),(11007,80008,20010,NULL,'2021-02-16',NULL,'Advisor'),(11008,80002,20003,NULL,'2022-03-20',NULL,'Director'),(11009,80008,20012,NULL,'2022-10-20',NULL,'Advisor'),(11010,80005,20013,NULL,'2021-10-08',NULL,'Advisor'),(11011,80002,20004,NULL,'2023-03-01',NULL,'Director'),(11001,80004,NULL,10030,'2022-10-09','2023-12-31','Member'),(11002,80003,NULL,10032,'2023-07-09',NULL,'Member'),(11003,80001,NULL,10036,'2022-07-14','2023-11-25','Member'),(11004,80006,NULL,10039,'2022-06-15',NULL,'Member'),(11005,80009,NULL,10041,'2022-05-15',NULL,'Member'),(11006,80007,NULL,10042,'2023-02-15',NULL,'Member'),(11007,80008,NULL,10047,'2023-10-09','2024-04-08','Member'),(11008,80002,NULL,10005,'2022-02-12',NULL,'Member'),(11009,80008,NULL,10006,'2022-10-12',NULL,'Member'),(11010,80005,NULL,10008,'2023-10-01',NULL,'Member'),(11011,80002,NULL,10018,'2023-03-01',NULL,'Member');
 /*!40000 ALTER TABLE `research_project_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25 22:00:13
+-- Dump completed on 2024-09-28 12:24:07

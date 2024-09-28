@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER 
 USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: csck542_ema_group_b
+-- Host: 192.168.1.32    Database: csck542_ema_group_b
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -28,8 +28,8 @@ CREATE TABLE `student_organization_members` (
   `organization_id` int NOT NULL,
   `student_id` int DEFAULT NULL,
   `lecturer_id` int DEFAULT NULL,
-  `start_date` varchar(45) DEFAULT NULL,
-  `end_date` varchar(45) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
   `role` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,7 +40,7 @@ CREATE TABLE `student_organization_members` (
 
 LOCK TABLES `student_organization_members` WRITE;
 /*!40000 ALTER TABLE `student_organization_members` DISABLE KEYS */;
-INSERT INTO `student_organization_members` VALUES (90001,10001,NULL,'10/10/2022',NULL,'Director'),(90002,NULL,20001,'06/04/2020',NULL,'Advisor'),(90003,10002,NULL,'10/12/2023','03/05/2024','Member'),(90004,10003,NULL,'08/11/2023',NULL,'Treasurer'),(90005,10004,NULL,'17/06/2022','10/10/2023','Member'),(90006,10005,NULL,'14/10/2023',NULL,'Associate Director'),(90007,NULL,20002,'07/05/2021',NULL,'Advisor'),(90008,10006,NULL,'09/10/2023',NULL,'Member'),(90009,10007,NULL,'04/04/2022',NULL,'Director'),(90010,10008,NULL,'01/03/2021',NULL,'Outreach Coordinator'),(90011,10009,NULL,'02/12/2020',NULL,'Member'),(90012,10010,NULL,'16/09/2021',NULL,'Member'),(90013,10011,NULL,'15/03/2022',NULL,'Director'),(90014,NULL,20003,'10/11/2020',NULL,'Advisor'),(90001,10012,NULL,'12/06/2022',NULL,'Member'),(90002,10013,NULL,'11/04/2023',NULL,'Member'),(90003,10014,NULL,'28/06/2021',NULL,'Treasurer'),(90004,10015,NULL,'10/05/2022',NULL,'Member'),(90005,10016,NULL,'19/10/2023',NULL,'Member'),(90006,10017,NULL,'05/05/2022',NULL,'Director'),(90007,10018,NULL,'06/04/2022','09/09/2023','Member'),(90008,NULL,20011,'01/02/2020',NULL,'Advisor'),(90009,10019,NULL,'04/04/2023',NULL,'Member'),(90010,10021,NULL,'11/03/2022',NULL,'Member'),(90011,10025,NULL,'09/04/2021',NULL,'Member'),(90012,10028,NULL,'08/05/2022',NULL,'Outreach Coordinator'),(90013,NULL,20014,NULL,NULL,'Advisor'),(90014,10035,NULL,'12/04/2023',NULL,'Member');
+INSERT INTO `student_organization_members` VALUES (90001,10001,NULL,'2022-10-10',NULL,'Director'),(90002,NULL,20001,'2020-06-08',NULL,'Advisor'),(90003,10002,NULL,'2023-10-12','2024-03-05','Member'),(90004,10003,NULL,'2023-10-06',NULL,'Treasurer'),(90005,10004,NULL,'2021-05-10',NULL,'Member'),(90006,10005,NULL,'2022-10-08','2023-12-05','Associate Director'),(90007,NULL,20002,NULL,NULL,'Advisor'),(90008,10006,NULL,'2022-04-15',NULL,'Member'),(90009,10007,NULL,'2021-10-16',NULL,'Director'),(90010,10008,NULL,'2022-02-17',NULL,'Outreach Coordinator'),(90011,10009,NULL,'2022-01-06',NULL,'Member'),(90012,10010,NULL,'2021-01-24',NULL,'Member'),(90013,10011,NULL,'2022-03-26',NULL,'Director'),(90014,NULL,20003,'2021-05-08',NULL,'Advisor'),(90001,10012,NULL,'2021-07-11',NULL,'Member'),(90002,10013,NULL,'2021-08-20',NULL,'Member'),(90003,10014,NULL,'2021-09-06',NULL,'Treasurer'),(90004,10015,NULL,'2021-10-01',NULL,'Member'),(90005,10016,NULL,'2023-02-01',NULL,'Member'),(90006,10017,NULL,'2022-02-06',NULL,'Director'),(90007,10018,NULL,'2022-11-06','2023-09-05','Member'),(90008,NULL,20011,'2020-03-08',NULL,'Advisor'),(90009,10019,NULL,'2022-10-06',NULL,'Member'),(90010,10021,NULL,'2022-02-06',NULL,'Member'),(90011,10025,NULL,'2022-12-02',NULL,'Member'),(90012,10028,NULL,'2021-12-08',NULL,'Outreach Coordinator'),(90013,NULL,20014,'2019-10-08',NULL,'Advisor'),(90014,10035,NULL,'2021-11-08',NULL,'Member');
 /*!40000 ALTER TABLE `student_organization_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25 22:00:14
+-- Dump completed on 2024-09-28 12:24:08

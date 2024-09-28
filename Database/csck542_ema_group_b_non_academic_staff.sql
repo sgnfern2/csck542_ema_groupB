@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER 
 USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: csck542_ema_group_b
+-- Host: 192.168.1.32    Database: csck542_ema_group_b
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25 22:00:14
+-- Dump completed on 2024-09-28 12:24:06

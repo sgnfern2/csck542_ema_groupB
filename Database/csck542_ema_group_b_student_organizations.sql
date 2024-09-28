@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER 
 USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: csck542_ema_group_b
+-- Host: 192.168.1.32    Database: csck542_ema_group_b
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `student_organizations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student_organizations` (
   `organization_id` int NOT NULL AUTO_INCREMENT,
-  `organization_name` varchar(100) DEFAULT NULL,
-  `description` varchar(200) DEFAULT NULL,
+  `organization_name` varchar(100) NOT NULL,
+  `description` varchar(200) NOT NULL,
   PRIMARY KEY (`organization_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=98000 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25 22:00:15
+-- Dump completed on 2024-09-28 12:24:08

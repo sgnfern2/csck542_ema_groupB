@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `csck542_ema_group_b` /*!40100 DEFAULT CHARACTER 
 USE `csck542_ema_group_b`;
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: csck542_ema_group_b
+-- Host: 192.168.1.32    Database: csck542_ema_group_b
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -25,11 +25,11 @@ DROP TABLE IF EXISTS `research_group_members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `research_group_members` (
-  `group_id` int DEFAULT NULL,
+  `group_id` int NOT NULL,
   `lecturer_id` int DEFAULT NULL,
-  `student_id` varchar(45) DEFAULT NULL,
-  `start_date` varchar(45) DEFAULT NULL,
-  `end_date` varchar(45) DEFAULT NULL,
+  `student_id` int DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
   `role` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,7 +40,7 @@ CREATE TABLE `research_group_members` (
 
 LOCK TABLES `research_group_members` WRITE;
 /*!40000 ALTER TABLE `research_group_members` DISABLE KEYS */;
-INSERT INTO `research_group_members` VALUES (80001,20004,NULL,'10/10/2020',NULL,'Director'),(80002,NULL,'10026','06/05/2022','06/12/2023','Member'),(80003,20005,NULL,'03/10/2021',NULL,'Advisor'),(80004,20006,'','11/06/2022',NULL,'Treasurer'),(80005,NULL,'10028','07/11/2023',NULL,'Member'),(80006,20007,NULL,'12/12/2021','','Director'),(80007,NULL,'10029','20/05/2022','06/05/2023','Member'),(80008,20008,NULL,'24/03/2020',NULL,'Director'),(80009,NULL,'10031','18/06/2022',NULL,'Member'),(80010,NULL,'10034','23/09/2023',NULL,'Member'),(80011,20009,NULL,'22/07/2021',NULL,'Treasurer'),(80001,NULL,'10037','25/01/2023',NULL,'Member'),(80002,NULL,'10042','18/12/2023',NULL,'Member'),(80003,20011,NULL,'17/10/2020',NULL,'Advisor'),(80004,NULL,'10046','14/04/2022',NULL,'Member'),(80005,20012,NULL,'13/03/2020','12/01/2023','Advisor'),(80006,NULL,'10048','11/11/2023',NULL,'Member'),(80007,NULL,'10050','11/04/2022',NULL,'Member'),(80008,NULL,'10010','09/09/2023',NULL,'Member'),(80009,NULL,'10012','10/07/2023',NULL,'Member'),(80010,20014,NULL,'14/10/2022',NULL,'Advisor'),(80011,NULL,'10017','12/05/2023',NULL,'Member');
+INSERT INTO `research_group_members` VALUES (80001,20004,NULL,'2021-06-03',NULL,'Director'),(80002,NULL,10026,'2022-01-04','2023-12-05','Member'),(80003,20005,NULL,'2021-02-03',NULL,'Advisor'),(80004,20006,NULL,'2021-10-03',NULL,'Treasurer'),(80005,NULL,10028,'2022-07-04',NULL,'Member'),(80006,20007,NULL,'2022-05-05',NULL,'Director'),(80007,NULL,10029,'2022-05-04','2023-10-05','Member'),(80008,20008,NULL,'2020-05-20',NULL,'Director'),(80009,NULL,10031,'2022-02-04',NULL,'Member'),(80010,NULL,10034,'2022-05-04',NULL,'Member'),(80011,20009,NULL,'2020-10-20',NULL,'Treasurer'),(80001,NULL,10037,'2022-01-10',NULL,'Member'),(80002,NULL,10042,'2022-10-10',NULL,'Member'),(80003,20011,NULL,'2020-02-22',NULL,'Advisor'),(80004,NULL,10046,'2021-10-11',NULL,'Member'),(80005,20012,NULL,'2021-03-23','2024-03-20','Advisor'),(80006,NULL,10048,'2022-10-04',NULL,'Member'),(80007,NULL,10050,'2022-03-04',NULL,'Member'),(80008,NULL,10010,'2022-11-04',NULL,'Member'),(80009,NULL,10012,'2022-06-04',NULL,'Member'),(80010,20014,NULL,'2021-10-23',NULL,'Advisor'),(80011,NULL,10017,'2022-10-03',NULL,'Member');
 /*!40000 ALTER TABLE `research_group_members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25 22:00:14
+-- Dump completed on 2024-09-28 12:24:07
