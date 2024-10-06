@@ -1,3 +1,7 @@
+"""
+This module provides functions to interact with the MySQL database,
+including establishing a connection and finding staff in a department.
+"""
 import mysql.connector
 
 def create_connection():
@@ -41,3 +45,5 @@ def find_staff_in_department(department_id):
 
 # Example:
 find_staff_in_department(40004)
+cursor.close()
+conn.close()
