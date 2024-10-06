@@ -1,3 +1,8 @@
+"""
+This module contains functions to interact with a MySQL database 
+and perform a query to find the courses with the highest number of 
+students enrolled in them 
+"""
 import mysql.connector
 
 def create_connection():
@@ -32,7 +37,8 @@ def find_courses_with_most_students(cursor):
     cursor.execute(query)
 
     for (course_name, student_count) in cursor.fetchall():
-        print(f"Course: {course_name}, Students Enrolled: {student_count}")
-
+        print(f"Course: {course_name}, Students Enrolled: {student_count}") 
 find_courses_with_most_students(cursor)
+cursor.close()
+conn.close()
  
