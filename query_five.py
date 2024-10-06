@@ -1,3 +1,8 @@
+"""
+This module establishes a connection to a MySQL database and 
+performs a query to retrieve student names that are 
+members of both a research group and a student organization.
+"""
 import mysql.connector
 
 def create_connection():
@@ -37,3 +42,4 @@ for (first_name, last_name) in cursor.fetchall():
 
     cursor.close()
     conn.close()
+    
