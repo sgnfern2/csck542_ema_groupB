@@ -1,3 +1,7 @@
+"""
+This module establishes a connection to a MySQL database 
+and executes a query to retrieve lecturer project counts.
+"""
 import mysql.connector
 
 def create_connection():
@@ -32,3 +36,6 @@ cursor.execute(query)
 for (first_name, last_name, project_count) in cursor.fetchall():
     full_name = f"{first_name} {last_name}"
     print(f"Lecturer: {full_name}, Projects Supervised: {project_count}")
+    cursor.close()
+    conn.close()
+    
