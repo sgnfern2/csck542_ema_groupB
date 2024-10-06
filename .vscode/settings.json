@@ -1,0 +1,30 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Database",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.32",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "CSCK542",
+            "database": "Database",
+            "username": "groupB",
+            "askForPassword": true
+        }
+    ],
+    "python.testing.pytestArgs": [
+        "__pycache__"
+    ]
+}
